@@ -1,0 +1,12 @@
+﻿  Parrallel1.cpp
+F:\parallel labs\Parrallel1\Parrallel1\Parrallel1.cpp(119,27): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+F:\parallel labs\Parrallel1\Parrallel1\Parrallel1.cpp(120,51): warning C4244: =: преобразование "_Rep" в "_Ty", возможна потеря данных
+F:\parallel labs\Parrallel1\Parrallel1\Parrallel1.cpp(120,51): warning C4244:         with
+F:\parallel labs\Parrallel1\Parrallel1\Parrallel1.cpp(120,51): warning C4244:         [
+F:\parallel labs\Parrallel1\Parrallel1\Parrallel1.cpp(120,51): warning C4244:             _Rep=__int64
+F:\parallel labs\Parrallel1\Parrallel1\Parrallel1.cpp(120,51): warning C4244:         ]
+F:\parallel labs\Parrallel1\Parrallel1\Parrallel1.cpp(120,51): warning C4244:         and
+F:\parallel labs\Parrallel1\Parrallel1\Parrallel1.cpp(120,51): warning C4244:         [
+F:\parallel labs\Parrallel1\Parrallel1\Parrallel1.cpp(120,51): warning C4244:             _Ty=double
+F:\parallel labs\Parrallel1\Parrallel1\Parrallel1.cpp(120,51): warning C4244:         ]
+  Parrallel1.vcxproj -> F:\parallel labs\Parrallel1\x64\Debug\Parrallel1.exe
