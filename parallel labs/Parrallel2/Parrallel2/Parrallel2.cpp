@@ -1,138 +1,127 @@
 ﻿#include <iostream>
 #include <vector>
 #include <random>
-#include <omp.h>
 #include <chrono>
-#include <functional> // Для std::function
-#include <iomanip>    // Для форматирования вывода
+#include <omp.h>
+#include <iomanip>
 
-// Функция для генерации случайной матрицы
-std::vector<std::vector<double>> generateRandomMatrix(int size) {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_real_distribution<> dis(0.0, 1.0);
+// Константы для размерности вектора и матрицы
+const int MAX_SIZE = 60000;
 
+// Функция для генерации случайного числа
+double random_double() {
+    static std::random_device rd;
+    static std::mt19937 gen(rd());
+    static std::uniform_real_distribution<> dis(0.0, 1.0);
+    return dis(gen);
+}
+
+// Функция для создания случайного вектора
+std::vector<double> create_random_vector(int size) {
+    std::vector<double> vec(size);
+    for (int i = 0; i < size; ++i) {
+        vec[i] = random_double();
+    }
+    return vec;
+}
+
+// Функция для создания случайной квадратной матрицы
+std::vector<std::vector<double>> create_random_matrix(int size) {
     std::vector<std::vector<double>> matrix(size, std::vector<double>(size));
     for (int i = 0; i < size; ++i) {
         for (int j = 0; j < size; ++j) {
-            matrix[i][j] = dis(gen);
+            matrix[i][j] = random_double();
         }
     }
     return matrix;
 }
 
-// Функция для генерации случайного вектора
-std::vector<double> generateRandomVector(int size) {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_real_distribution<> dis(0.0, 1.0);
-
-    std::vector<double> vector(size);
-    for (int i = 0; i < size; ++i) {
-        vector[i] = dis(gen);
-    }
-    return vector;
-}
-
-// Последовательное умножение вектора на матрицу
-std::vector<double> sequentialMatrixVectorMultiplication(const std::vector<std::vector<double>>& matrix,
-    const std::vector<double>& vector) {
-    int size = matrix.size();
+// Умножение вектора на матрицу в один поток
+std::vector<double> multiply_vector_matrix_single_thread(const std::vector<double>& vec,
+    const std::vector<std::vector<double>>& matrix) {
+    int size = vec.size();
     std::vector<double> result(size, 0.0);
-
     for (int i = 0; i < size; ++i) {
         for (int j = 0; j < size; ++j) {
-            result[i] += matrix[i][j] * vector[j];
+            result[i] += vec[j] * matrix[j][i];
         }
     }
-
     return result;
 }
 
-// Параллельное умножение вектора на матрицу
-std::vector<double> parallelMatrixVectorMultiplication(const std::vector<std::vector<double>>& matrix,
-    const std::vector<double>& vector, int numThreads) {
-    int size = matrix.size();
+// Умножение вектора на матрицу с использованием OpenMP
+std::vector<double> multiply_vector_matrix_openmp(const std::vector<double>& vec,
+    const std::vector<std::vector<double>>& matrix,
+    int num_threads) {
+    int size = vec.size();
     std::vector<double> result(size, 0.0);
 
-#pragma omp parallel num_threads(numThreads)
-    {
-#pragma omp for
-        for (int i = 0; i < size; ++i) {
-            for (int j = 0; j < size; ++j) {
-                result[i] += matrix[i][j] * vector[j];
-            }
+#pragma omp parallel for num_threads(num_threads)
+    for (int i = 0; i < size; ++i) {
+        for (int j = 0; j < size; ++j) {
+            result[i] += vec[j] * matrix[j][i];
         }
     }
 
     return result;
 }
 
-// Функция для измерения времени выполнения
-double measureTime(std::function<void()> func) {
-    auto startTime = std::chrono::high_resolution_clock::now();
-    func();
-    auto endTime = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
-    return duration.count();
+// Вывод результатов в таблицу
+void print_results_table(int size, int num_threads, double single_thread_time, double openmp_time) {
+    std::cout << std::setw(10) << size
+        << std::setw(15) << num_threads
+        << std::setw(20) << single_thread_time << " ms"
+        << std::setw(20) << openmp_time << " ms"
+        << std::setw(20) << (single_thread_time / openmp_time) << "x speedup"
+        << std::endl;
 }
 
 int main() {
-    // Размеры матриц и векторов для тестирования
-    const int sizes[] = { 1000, 2000, 4000, 60000 };
-    const int threadCounts[] = { 1, 2, 4, 8 };
+    // Размеры для экспериментов
+    std::vector<int> sizes = { 1000, 5000, 10000, 20000, 30000, 40000, 50000 };
+    std::vector<int> thread_counts = { 1, 2, 4, 8 };
 
-    // Таблица для хранения результатов
-    std::vector<std::vector<double>> results(sizes, std::vector<double>(threadCounts));
-
-    for (size_t s = 0; s < sizeof(sizes) / sizeof(sizes[0]); ++s) {
-        int size = sizes[s];
-
-        // Генерация матрицы и вектора
-        std::vector<std::vector<double>> matrix = generateRandomMatrix(size);
-        std::vector<double> vector = generateRandomVector(size);
-
-        std::cout << "\nРазмер объектов: " << size << std::endl;
-
-        for (size_t t = 0; t < sizeof(threadCounts) / sizeof(threadCounts[0]); ++t) {
-            int numThreads = threadCounts[t];
-
-            if (numThreads == 1) {
-                // Последовательное умножение
-                auto sequentialFunc = [&]() {
-                    sequentialMatrixVectorMultiplication(matrix, vector);
-                    };
-                double time = measureTime(sequentialFunc);
-                results[s][t] = time;
-                std::cout << "Последовательное умножение (время): " << time << " мс" << std::endl;
-            }
-            else {
-                // Параллельное умножение
-                auto parallelFunc = [&]() {
-                    parallelMatrixVectorMultiplication(matrix, vector, numThreads);
-                    };
-                double time = measureTime(parallelFunc);
-                results[s][t] = time;
-                std::cout << "Параллельное умножение (" << numThreads << " потоков, время): " << time << " мс" << std::endl;
-            }
-        }
-    }
-
-    // Вывод результатов в виде таблицы
-    std::cout << "\nТаблица результатов:\n";
-    std::cout << std::setw(20) << "Размер объектов"
-        << std::setw(25) << "Последовательный (время)"
-        << std::setw(25) << "2 процесса (время)"
-        << std::setw(25) << "4 процесса (время)"
-        << std::setw(25) << "8 процесса (время)"
+    // Заголовок таблицы
+    std::cout << std::setw(10) << "Size"
+        << std::setw(15) << "Threads"
+        << std::setw(20) << "Single-thread Time"
+        << std::setw(20) << "OpenMP Time"
+        << std::setw(20) << "Speedup"
         << std::endl;
 
-    for (size_t s = 0; s < sizeof(sizes) / sizeof(sizes[0]); ++s) {
-        std::cout << std::setw(20) << sizes[s];
-        for (size_t t = 0; t < sizeof(threadCounts) / sizeof(threadCounts[0]); ++t) {
-            std::cout << std::setw(25) << results[s][t];
+    for (int size : sizes) {
+        // Создаем случайный вектор и матрицу
+        std::vector<double> vec = create_random_vector(size);
+        std::vector<std::vector<double>> matrix = create_random_matrix(size);
+
+        // Однопоточное умножение
+        auto start = std::chrono::high_resolution_clock::now();
+        std::vector<double> single_thread_result = multiply_vector_matrix_single_thread(vec, matrix);
+        auto end = std::chrono::high_resolution_clock::now();
+        double single_thread_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+
+        for (int num_threads : thread_counts) {
+            // Многопоточное умножение
+            start = std::chrono::high_resolution_clock::now();
+            std::vector<double> openmp_result = multiply_vector_matrix_openmp(vec, matrix, num_threads);
+            end = std::chrono::high_resolution_clock::now();
+            double openmp_time = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+
+            // Проверка результатов
+            bool results_match = true;
+            for (int i = 0; i < size && results_match; ++i) {
+                if (std::abs(single_thread_result[i] - openmp_result[i]) > 1e-6) {
+                    results_match = false;
+                }
+            }
+
+            if (!results_match) {
+                std::cerr << "Results do not match for size = " << size << " and threads = " << num_threads << std::endl;
+            }
+
+            // Вывод результатов
+            print_results_table(size, num_threads, single_thread_time, openmp_time);
         }
-        std::cout << std::endl;
     }
 
     return 0;

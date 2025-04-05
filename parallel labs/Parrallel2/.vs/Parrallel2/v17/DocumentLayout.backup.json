@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\parallel labs\\Parrallel2\\",
+  "WorkspaceRootPath": "C:\\Users\\polly\\Documents\\GitHub\\perzev\\parallel labs\\Parrallel2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DBB8C3A-9208-44E3-B752-1BFA59167E17}|Parrallel2\\Parrallel2.vcxproj|F:\\parallel labs\\Parrallel2\\Parrallel2\\Parrallel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{2DBB8C3A-9208-44E3-B752-1BFA59167E17}|Parrallel2\\Parrallel2.vcxproj|C:\\Users\\polly\\Documents\\GitHub\\perzev\\parallel labs\\Parrallel2\\Parrallel2\\Parrallel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2DBB8C3A-9208-44E3-B752-1BFA59167E17}|Parrallel2\\Parrallel2.vcxproj|solutionrelative:Parrallel2\\Parrallel2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,18 +20,14 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Parrallel2.cpp",
-              "DocumentMoniker": "F:\\parallel labs\\Parrallel2\\Parrallel2\\Parrallel2.cpp",
+              "DocumentMoniker": "C:\\Users\\polly\\Documents\\GitHub\\perzev\\parallel labs\\Parrallel2\\Parrallel2\\Parrallel2.cpp",
               "RelativeDocumentMoniker": "Parrallel2\\Parrallel2.cpp",
-              "ToolTip": "F:\\parallel labs\\Parrallel2\\Parrallel2\\Parrallel2.cpp",
+              "ToolTip": "C:\\Users\\polly\\Documents\\GitHub\\perzev\\parallel labs\\Parrallel2\\Parrallel2\\Parrallel2.cpp",
               "RelativeToolTip": "Parrallel2\\Parrallel2.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-28T22:31:26.643Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

@@ -1,83 +1,14 @@
 ﻿  Parrallel2.cpp
-F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(40,14): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(55,14): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(77,26): warning C4244: return: преобразование "_Rep" в "double", возможна потеря данных
-F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(77,26): warning C4244:         with
-F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(77,26): warning C4244:         [
-F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(77,26): warning C4244:             _Rep=__int64
-F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(77,26): warning C4244:         ]
-F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,52): error C2228: выражение слева от ".size" должно представлять класс, структуру или объединение
-      F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,52):
-      тип: int [4]
-  
-F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,101): warning C4244: аргумент: преобразование "double" в "const unsigned __int64", возможна потеря данных
-F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,45): error C2665: "std::vector<std::vector<double,std::allocator<double>>,std::allocator<std::vector<double,std::allocator<double>>>>::vector": ни одна перегруженная функция не может преобразовать все типы аргументов
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\vector(650,5):
-      может быть "std::vector<std::vector<double,std::allocator<double>>,std::allocator<std::vector<double,std::allocator<double>>>>::vector(std::initializer_list<_Ty>,const _Alloc &)"
-          with
-          [
-              _Ty=std::vector<double,std::allocator<double>>,
-              _Alloc=std::allocator<std::vector<double,std::allocator<double>>>
-          ]
-          F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,45):
-          "std::vector<std::vector<double,std::allocator<double>>,std::allocator<std::vector<double,std::allocator<double>>>>::vector(std::initializer_list<_Ty>,const _Alloc &)": невозможно преобразовать аргумент 1 из "std::vector<double,std::allocator<double>>" в "std::initializer_list<_Ty>"
-          with
-          [
-              _Ty=std::vector<double,std::allocator<double>>,
-              _Alloc=std::allocator<std::vector<double,std::allocator<double>>>
-          ]
-          and
-          [
-              _Ty=std::vector<double,std::allocator<double>>
-          ]
-              F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,79):
-              Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\vector(609,5):
-      или       "std::vector<std::vector<double,std::allocator<double>>,std::allocator<std::vector<double,std::allocator<double>>>>::vector(const unsigned __int64,const _Alloc &)"
-          with
-          [
-              _Alloc=std::allocator<std::vector<double,std::allocator<double>>>
-          ]
-          F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,45):
-          "std::vector<std::vector<double,std::allocator<double>>,std::allocator<std::vector<double,std::allocator<double>>>>::vector(const unsigned __int64,const _Alloc &)": невозможно преобразовать аргумент 1 из "std::vector<double,std::allocator<double>>" в "const unsigned __int64"
-          with
-          [
-              _Alloc=std::allocator<std::vector<double,std::allocator<double>>>
-          ]
-              F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,79):
-              Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\vector(605,5):
-      или       "std::vector<std::vector<double,std::allocator<double>>,std::allocator<std::vector<double,std::allocator<double>>>>::vector(const _Alloc &) noexcept"
-          with
-          [
-              _Alloc=std::allocator<std::vector<double,std::allocator<double>>>
-          ]
-          F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,45):
-          "std::vector<std::vector<double,std::allocator<double>>,std::allocator<std::vector<double,std::allocator<double>>>>::vector(const _Alloc &) noexcept": невозможно преобразовать аргумент 1 из "std::vector<double,std::allocator<double>>" в "const _Alloc &"
-          with
-          [
-              _Alloc=std::allocator<std::vector<double,std::allocator<double>>>
-          ]
-              F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,79):
-              Причина: невозможно преобразовать "std::vector<double,std::allocator<double>>" в "const _Alloc"
-          with
-          [
-              _Alloc=std::allocator<std::vector<double,std::allocator<double>>>
-          ]
-              F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,79):
-              Для выполнения данного преобразования нет доступного оператора преобразования, определенного пользователем, или вызов оператора невозможен
-      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\vector(623,5):
-      или       "std::vector<std::vector<double,std::allocator<double>>,std::allocator<std::vector<double,std::allocator<double>>>>::vector(_Iter,_Iter,const _Alloc &)"
-          with
-          [
-              _Alloc=std::allocator<std::vector<double,std::allocator<double>>>
-          ]
-          F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,45):
-          "std::vector<std::vector<double,std::allocator<double>>,std::allocator<std::vector<double,std::allocator<double>>>>::vector(_Iter,_Iter,const _Alloc &)": ожидаются аргументы 3 — 1 предоставлены
-          with
-          [
-              _Alloc=std::allocator<std::vector<double,std::allocator<double>>>
-          ]
-      F:\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(86,45):
-      при попытке сопоставить список аргументов "(std::vector<double,std::allocator<double>>)"
-  
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(42,14): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(56,14): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(101,35): warning C4244: инициализация: преобразование "_Rep" в "double", возможна потеря данных
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(101,35): warning C4244:         with
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(101,35): warning C4244:         [
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(101,35): warning C4244:             _Rep=__int64
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(101,35): warning C4244:         ]
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(108,32): warning C4244: инициализация: преобразование "_Rep" в "double", возможна потеря данных
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(108,32): warning C4244:         with
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(108,32): warning C4244:         [
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(108,32): warning C4244:             _Rep=__int64
+C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\Parrallel2\Parrallel2.cpp(108,32): warning C4244:         ]
+  Parrallel2.vcxproj -> C:\Users\polly\Documents\GitHub\perzev\parallel labs\Parrallel2\x64\Debug\Parrallel2.exe
