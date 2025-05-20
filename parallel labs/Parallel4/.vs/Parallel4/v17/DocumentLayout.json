@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\parallel labs\\Parallel4\\",
+  "WorkspaceRootPath": "F:\\perzev\\parallel labs\\Parallel4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{802B7F04-B1C6-4A47-A5D5-0893162DDA88}|Parallel4\\Parallel4.vcxproj|F:\\parallel labs\\Parallel4\\Parallel4\\Messages.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{802B7F04-B1C6-4A47-A5D5-0893162DDA88}|Parallel4\\Parallel4.vcxproj|solutionrelative:Parallel4\\Messages.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{802B7F04-B1C6-4A47-A5D5-0893162DDA88}|Parallel4\\Parallel4.vcxproj|F:\\parallel labs\\Parallel4\\Parallel4\\Monitor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{802B7F04-B1C6-4A47-A5D5-0893162DDA88}|Parallel4\\Parallel4.vcxproj|solutionrelative:Parallel4\\Monitor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{802B7F04-B1C6-4A47-A5D5-0893162DDA88}|Parallel4\\Parallel4.vcxproj|F:\\parallel labs\\Parallel4\\Parallel4\\Parallel4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{802B7F04-B1C6-4A47-A5D5-0893162DDA88}|Parallel4\\Parallel4.vcxproj|F:\\perzev\\parallel labs\\Parallel4\\Parallel4\\Parallel4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{802B7F04-B1C6-4A47-A5D5-0893162DDA88}|Parallel4\\Parallel4.vcxproj|solutionrelative:Parallel4\\Parallel4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{802B7F04-B1C6-4A47-A5D5-0893162DDA88}|Parallel4\\Parallel4.vcxproj|F:\\perzev\\parallel labs\\Parallel4\\Parallel4\\Monitor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{802B7F04-B1C6-4A47-A5D5-0893162DDA88}|Parallel4\\Parallel4.vcxproj|solutionrelative:Parallel4\\Monitor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,37 +24,23 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Monitor.cpp",
-              "DocumentMoniker": "F:\\parallel labs\\Parallel4\\Parallel4\\Monitor.cpp",
+              "DocumentMoniker": "F:\\perzev\\parallel labs\\Parallel4\\Parallel4\\Monitor.cpp",
               "RelativeDocumentMoniker": "Parallel4\\Monitor.cpp",
-              "ToolTip": "F:\\parallel labs\\Parallel4\\Parallel4\\Monitor.cpp",
+              "ToolTip": "F:\\perzev\\parallel labs\\Parallel4\\Parallel4\\Monitor.cpp",
               "RelativeToolTip": "Parallel4\\Monitor.cpp",
               "ViewState": "AgIAADMAAAAAAAAAAAAewFMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-04T19:01:45.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T19:01:45.752Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Messages.cpp",
-              "DocumentMoniker": "F:\\parallel labs\\Parallel4\\Parallel4\\Messages.cpp",
-              "RelativeDocumentMoniker": "Parallel4\\Messages.cpp",
-              "ToolTip": "F:\\parallel labs\\Parallel4\\Parallel4\\Messages.cpp",
-              "RelativeToolTip": "Parallel4\\Messages.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-04T19:00:22.313Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Parallel4.cpp",
-              "DocumentMoniker": "F:\\parallel labs\\Parallel4\\Parallel4\\Parallel4.cpp",
+              "DocumentMoniker": "F:\\perzev\\parallel labs\\Parallel4\\Parallel4\\Parallel4.cpp",
               "RelativeDocumentMoniker": "Parallel4\\Parallel4.cpp",
-              "ToolTip": "F:\\parallel labs\\Parallel4\\Parallel4\\Parallel4.cpp",
+              "ToolTip": "F:\\perzev\\parallel labs\\Parallel4\\Parallel4\\Parallel4.cpp",
               "RelativeToolTip": "Parallel4\\Parallel4.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAuwBYBAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-04T18:58:43.312Z",
               "EditorCaption": ""

@@ -1,14 +1,17 @@
-﻿  Monitor.cpp
-Monitor.obj : error LNK2005: "void __cdecl player1(void)" (?player1@@YAXXZ) уже определен в Messages.obj
-Monitor.obj : error LNK2005: "void __cdecl player2(void)" (?player2@@YAXXZ) уже определен в Messages.obj
-Monitor.obj : error LNK2005: "int __cdecl rollDice(void)" (?rollDice@@YAHXZ) уже определен в Messages.obj
-Monitor.obj : error LNK2005: main уже определен в Messages.obj
-Parallel4.obj : error LNK2005: "void __cdecl monitor(void)" (?monitor@@YAXXZ) уже определен в Messages.obj
-Parallel4.obj : error LNK2005: "void __cdecl player1(void)" (?player1@@YAXXZ) уже определен в Messages.obj
-Parallel4.obj : error LNK2005: "void __cdecl player2(void)" (?player2@@YAXXZ) уже определен в Messages.obj
-Parallel4.obj : error LNK2005: "int __cdecl rollDice(void)" (?rollDice@@YAHXZ) уже определен в Messages.obj
-Parallel4.obj : error LNK2005: main уже определен в Messages.obj
-Parallel4.obj : error LNK2005: "int player1_score" (?player1_score@@3HA) уже определен в Messages.obj
-Parallel4.obj : error LNK2005: "int player2_score" (?player2_score@@3HA) уже определен в Messages.obj
-Parallel4.obj : error LNK2005: "class std::mutex mtx" (?mtx@@3Vmutex@std@@A) уже определен в Messages.obj
-F:\parallel labs\Parallel4\x64\Debug\Parallel4.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
+﻿  Parallel4.cpp
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(43,80): warning C4244: аргумент: преобразование "_Rep" в "unsigned int", возможна потеря данных
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(43,80): warning C4244:         with
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(43,80): warning C4244:         [
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(43,80): warning C4244:             _Rep=std::chrono::system_clock::rep
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(43,80): warning C4244:         ]
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(104,80): warning C4244: аргумент: преобразование "_Rep" в "unsigned int", возможна потеря данных
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(104,80): warning C4244:         with
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(104,80): warning C4244:         [
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(104,80): warning C4244:             _Rep=std::chrono::system_clock::rep
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(104,80): warning C4244:         ]
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(158,80): warning C4244: аргумент: преобразование "_Rep" в "unsigned int", возможна потеря данных
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(158,80): warning C4244:         with
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(158,80): warning C4244:         [
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(158,80): warning C4244:             _Rep=std::chrono::system_clock::rep
+F:\perzev\parallel labs\Parallel4\Parallel4\Parallel4.cpp(158,80): warning C4244:         ]
+  Parallel4.vcxproj -> F:\perzev\parallel labs\Parallel4\x64\Debug\Parallel4.exe

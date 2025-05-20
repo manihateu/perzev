@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\polly\\Documents\\GitHub\\perzev\\parallel labs\\Parrallel1\\",
+  "WorkspaceRootPath": "F:\\perzev\\parallel labs\\Parrallel1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9A566EA-A763-4B40-B91B-265EFC4C62B7}|Parrallel1\\Parrallel1.vcxproj|C:\\Users\\polly\\Documents\\GitHub\\perzev\\parallel labs\\Parrallel1\\Parrallel1\\Parrallel1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A9A566EA-A763-4B40-B91B-265EFC4C62B7}|Parrallel1\\Parrallel1.vcxproj|F:\\perzev\\parallel labs\\Parrallel1\\Parrallel1\\Parrallel1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A9A566EA-A763-4B40-B91B-265EFC4C62B7}|Parrallel1\\Parrallel1.vcxproj|solutionrelative:Parrallel1\\Parrallel1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,21 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Parrallel1.cpp",
-              "DocumentMoniker": "C:\\Users\\polly\\Documents\\GitHub\\perzev\\parallel labs\\Parrallel1\\Parrallel1\\Parrallel1.cpp",
+              "DocumentMoniker": "F:\\perzev\\parallel labs\\Parrallel1\\Parrallel1\\Parrallel1.cpp",
               "RelativeDocumentMoniker": "Parrallel1\\Parrallel1.cpp",
-              "ToolTip": "C:\\Users\\polly\\Documents\\GitHub\\perzev\\parallel labs\\Parrallel1\\Parrallel1\\Parrallel1.cpp",
+              "ToolTip": "F:\\perzev\\parallel labs\\Parrallel1\\Parrallel1\\Parrallel1.cpp",
               "RelativeToolTip": "Parrallel1\\Parrallel1.cpp",
-              "ViewState": "AgIAAD8AAAAAAAAAAADwv2QAAABLAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAADwv04AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-28T22:09:57.668Z",
               "EditorCaption": ""
